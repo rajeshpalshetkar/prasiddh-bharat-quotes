@@ -4,7 +4,7 @@ const root=document.getElementById("pb-quotes");
 if(!root||root.dataset.ready==="1")return;
 root.dataset.ready="1";
 const RAW="https://raw.githubusercontent.com/rajeshpalshetkar/prasiddh-bharat-quotes/main/";
-const INDEX_URL=RAW+"data/quotes-index.json?v=2";
+const INDEX_URL=RAW+"data/quotes-index.json?v=3";
 const PAGE_SIZE=20;
 const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n};
 const status=root.querySelector(".pb-status"),list=root.querySelector(".pb-list"),detail=root.querySelector(".pb-detail"),search=root.querySelector(".pb-search"),category=root.querySelector(".pb-category");
@@ -54,7 +54,7 @@ async function renderDetail(){
   const articles=await loadArticle(q),article=articles.find(a=>a.id===q.id);
   if(!article||!article.content)throw new Error("या सुविचाराचा लेख उपलब्ध नाही.");
   loading.remove();const c=article.content;
-  [["प्रस्तावना","introduction"],["सुविचाराचा अर्थ","meaning"],["वास्तविक उदाहरण","story"],["स्पष्टीकरण आणि शिकवण","takeaway"],["अधिक वाचा","callToAction"]].forEach(([heading,key])=>{if(c[key]){detail.append(el("h3","",heading));detail.append(el("p","",c[key]))}});
+  [["प्रस्तावना","introduction"],["सुविचाराचा अर्थ","meaning"],["वास्तविक उदाहरण","story"],["स्पष्टीकरण आणि शिकवण","takeaway"]].forEach(([heading,key])=>{if(c[key]){detail.append(el("h3","",heading));detail.append(el("p","",c[key]))}});\n  if(Array.isArray(c.ways)&&c.ways.length){detail.append(el("h3","","ध्येय साध्य करण्यासाठी १० कृतीशील मार्ग"));const ol=el("ol","pb-ways");c.ways.forEach((way)=>{const li=el("li","");li.append(el("strong","",way.title));li.append(el("p","",way.description));ol.append(li)});detail.append(ol)}\n  if(c.callToAction){detail.append(el("h3","","शेवटचा विचार"));detail.append(el("p","",c.callToAction))}
   const actions=el("div","");actions.style.marginTop="20px";
   const copy=el("button","pb-primary","सुविचार कॉपी करा");copy.type="button";copy.addEventListener("click",()=>{const text=q.title+"\n"+q.quote+"\n"+location.href;if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text).then(()=>copy.textContent="कॉपी झाले").catch(()=>copy.textContent="कॉपी करता आले नाही")});
   const share=el("button","pb-secondary","शेअर करा");share.type="button";share.addEventListener("click",()=>{if(navigator.share)navigator.share({title:q.title,text:q.quote,url:location.href}).catch(()=>{});else window.open("https://wa.me/?text="+encodeURIComponent(q.title+" "+location.href),"_blank","noopener")});
