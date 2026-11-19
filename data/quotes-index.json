@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "2.0.0",
+  "collection": "1000 Inspirational Quotes",
+  "site": "Prasiddh Bharat",
+  "language": "mr-IN",
+  "pageSize": 20,
+  "totalQuotes": 1000,
+  "lastUpdated": "2026-11-19",
+  "quotes": [
+    {
+      "id": 1,
+      "slug": "tumcha-sangharsh-tumchi-olakh",
+      "title": "तुमचा संघर्षच तुमची ओळख बनवतो",
+      "quote": "तुमचा संघर्षच तुमची ओळख बनवतो.",
+      "category": "Motivation",
+      "tags": [
+        "संघर्ष",
+        "प्रेरणा",
+        "यश",
+        "आत्मविश्वास",
+        "जीवन"
+      ],
+      "language": "Marathi",
+      "author": "Prasiddh Bharat",
+      "seo": {
+        "title": "तुमचा संघर्षच तुमची ओळख बनवतो | प्रेरणादायी सुविचार",
+        "description": "संघर्ष, आत्मविश्वास आणि सातत्य यांचे महत्त्व सांगणारा प्रेरणादायी सुविचार. संघर्षातून व्यक्तिमत्त्व कसे घडते ते जाणून घ्या.",
+        "keywords": [
+          "प्रेरणादायी सुविचार",
+          "संघर्ष",
+          "जीवनातील संघर्ष",
+          "मराठी सुविचार",
+          "यश"
+        ]
+      },
+      "articleFile": "data/articles/batch-001.json",
+      "publication": {
+        "status": "published",
+        "bloggerPostUrl": "",
+        "publishedAt": "2026-11-19"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "kalpeksa-aaj-changle-banyacha-prayatna-kara",
+      "title": "कालपेक्षा आज चांगले बनण्याचा प्रयत्न करा",
+      "quote": "कालपेक्षा आज चांगले बनण्याचा प्रयत्न करा.",
+      "category": "Self Improvement",
+      "tags": [
+        "आत्मविकास",
+        "स्वतःमध्ये सुधारणा",
+        "सातत्य",
+        "सकारात्मक विचार",
+        "जीवनप्रगती"
+      ],
+      "language": "Marathi",
+      "author": "Prasiddh Bharat",
+      "seo": {
+        "title": "कालपेक्षा आज चांगले बनण्याचा प्रयत्न करा | आत्मविकासाचा सुविचार",
+        "description": "दररोज स्वतःमध्ये छोटी सुधारणा करून जीवनात प्रगती कशी साधता येते, हे सांगणारा प्रेरणादायी मराठी लेख.",
+        "keywords": [
+          "मराठी प्रेरणादायी सुविचार",
+          "आत्मविकास",
+          "दररोज सुधारणा",
+          "स्वतःमध्ये बदल",
+          "सकारात्मक विचार",
+          "जीवनात प्रगती"
+        ]
+      },
+      "articleFile": "data/articles/batch-001.json",
+      "publication": {
+        "status": "published",
+        "bloggerPostUrl": "",
+        "publishedAt": "2026-11-19"
+      }
+    }
+  ]
+}
