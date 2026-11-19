@@ -1,0 +1,23 @@
+name: Validate quote data
+
+on:
+  push:
+    paths:
+      - "data/**"
+      - "scripts/validate-quotes.mjs"
+      - ".github/workflows/validate-quotes.yml"
+  pull_request:
+    paths:
+      - "data/**"
+      - "scripts/validate-quotes.mjs"
+      - ".github/workflows/validate-quotes.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/validate-quotes.mjs
