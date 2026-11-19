@@ -23,3 +23,8 @@
 #pb-quotes .pb-empty,#pb-quotes .pb-status{padding:22px;text-align:center;color:var(--pb-muted)}
 #pb-quotes .pb-footer{text-align:center;color:var(--pb-muted);font-size:12px;padding:22px 0}
 @media(max-width:650px){#pb-quotes .pb-controls,#pb-quotes .pb-grid{grid-template-columns:1fr}#pb-quotes .pb-head{padding:22px 18px}#pb-quotes .pb-card blockquote{font-size:17px}}
+
+#pb-quotes .pb-more-wrap{text-align:center;padding:22px 0}
+#pb-quotes .pb-load-more{min-width:190px}
+#pb-quotes .pb-card{min-width:0}
+#pb-quotes .pb-detail[hidden],#pb-quotes .pb-list[hidden]{display:none!important}
