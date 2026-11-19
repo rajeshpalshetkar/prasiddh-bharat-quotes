@@ -1,7 +1,7 @@
 (function(){
 "use strict";
 const root=document.getElementById("pb-quotes");if(!root||root.dataset.ready==="1")return;root.dataset.ready="1";
-const DATA_URL="https://raw.githubusercontent.com/rajeshpalshetkar/prasiddh-bharat-quotes/main/data/quotes.json";
+const DATA_URL="https://cdn.jsdelivr.net/gh/rajeshpalshetkar/prasiddh-bharat-quotes@main/data/quotes.json";
 const esc=s=>String(s??"");
 const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n};
 const status=root.querySelector(".pb-status"),list=root.querySelector(".pb-list"),detail=root.querySelector(".pb-detail"),search=root.querySelector(".pb-search"),category=root.querySelector(".pb-category");
