@@ -10,28 +10,39 @@ No permission is granted to copy, reproduce, modify, redistribute, republish, or
 
 ## Repository structure
 
-- `data/quotes.json` — structured quote and article data
+- `data/quotes-index.json` — lightweight index used for listing, search and categories
+- `data/articles/batch-001.json` — full article content for quote IDs 1–100
+- `data/articles/batch-002.json` through `batch-010.json` — reserved batches for IDs 101–1000
+- `data/quotes.json` — legacy combined backup; do not use it as the active data source
+- `assets/quotes.js` — index loading, search, category filter, article loading and pagination
 - `assets/quotes.css` — responsive navy-and-gold presentation
-- `assets/quotes.js` — search, category filter, article view, copy and share
 - `blogger-page.html` — embed code for a Blogger Page
+- `scripts/validate-quotes.mjs` — validates IDs, slugs and article references
+- `.github/workflows/validate-quotes.yml` — runs validation when data changes
 
-## Add to Blogger
+## How the site works
 
-1. Open Blogger and create or edit a Page (not a Post).
-2. Switch the editor to **HTML view**.
-3. Copy the complete contents of `blogger-page.html` into the page.
-4. Publish the page and test on desktop and mobile.
+1. Blogger loads the small `quotes-index.json` file.
+2. The listing shows 20 cards at a time. The “आणखी सुविचार पहा” button reveals the next 20 without downloading full article text.
+3. Full article content is fetched only when a reader opens a quote. The browser caches each article batch for the current page session.
+4. Only records with `publication.status` equal to `published` appear on the public page. Draft records remain hidden.
 
-The page loads published records from the public JSON file. Records whose `publication.status` is `draft` are not displayed.
+## Add a quote
 
-## Publish a quote
+1. Add the listing metadata to `data/quotes-index.json` with a unique numeric `id`, unique URL-safe `slug`, SEO fields, publication status and the correct `articleFile`.
+2. Add its full `content` object to the referenced article batch file under `articles`, using the same numeric ID.
+3. Keep batches grouped by 100 IDs: 1–100 in `batch-001.json`, 101–200 in `batch-002.json`, and so on.
+4. Run `node scripts/validate-quotes.mjs` before committing.
+5. Set `publication.status` to `published` only after editorial approval.
 
-Add a new object to the `quotes` array in `data/quotes.json`. Give it a unique numeric `id` and unique URL-safe `slug`. Set `publication.status` to `published` only after editorial approval. Keep it as `draft` while preparing.
+## Blogger setup
 
-## Data format
+Open Blogger → Pages → edit the inspirational quotes page → HTML view. Replace the complete page HTML with the current contents of `blogger-page.html`, then publish/update. The page uses versioned asset URLs to reduce stale browser/CDN cache issues.
 
-Each quote supports `id`, `slug`, `title`, `quote`, `category`, `tags`, `language`, `author`, `seo`, `content`, and `publication`.
+## Important SEO note
 
-## Important
+This is a JavaScript-powered listing and article viewer embedded in one Blogger Page. Changing the browser title when an article opens does not guarantee a separately crawlable, indexable URL and unique server-rendered metadata for every article. For strong per-article SEO at 1,000 entries, publish each article as an individual Blogger Post (or use a server-rendered/static page architecture) and use this quote directory as the discovery interface.
 
-This is a public repository: its contents are readable by anyone. Do not store access tokens, passwords, private data, or unpublished confidential material here.
+## Security
+
+This is a public repository. Do not store access tokens, passwords, private data or unpublished confidential material here.
