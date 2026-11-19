@@ -1,0 +1,25 @@
+/* Prasiddh Bharat Quotes — premium navy & gold */
+#pb-quotes{--pb-navy:#101b36;--pb-gold:#c9a44c;--pb-ink:#20283a;--pb-muted:#697386;--pb-line:#e7eaf0;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif;color:var(--pb-ink);max-width:1100px;margin:24px auto;padding:0 14px}
+#pb-quotes *{box-sizing:border-box}
+#pb-quotes .pb-head{background:linear-gradient(135deg,#101b36,#24375f);color:#fff;border-radius:18px;padding:28px 24px;margin-bottom:20px}
+#pb-quotes .pb-kicker{color:#e7c875;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+#pb-quotes h1,#pb-quotes h2,#pb-quotes h3{line-height:1.45;margin:8px 0}
+#pb-quotes .pb-head p{color:#e3e8f2;margin:8px 0 0}
+#pb-quotes .pb-controls{display:grid;grid-template-columns:1fr 220px;gap:10px;margin:18px 0}
+#pb-quotes input,#pb-quotes select{width:100%;padding:12px 14px;border:1px solid var(--pb-line);border-radius:10px;background:#fff;font:inherit;color:inherit}
+#pb-quotes .pb-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#pb-quotes .pb-card{border:1px solid var(--pb-line);border-radius:14px;padding:18px;background:#fff;box-shadow:0 5px 18px #15213b0a}
+#pb-quotes .pb-card blockquote{font-size:19px;font-weight:700;line-height:1.7;margin:8px 0 14px;color:var(--pb-navy)}
+#pb-quotes .pb-meta{font-size:12px;color:var(--pb-muted)}
+#pb-quotes .pb-tag{display:inline-block;background:#f5f1e7;color:#72571d;border-radius:30px;padding:4px 9px;font-size:11px;margin:3px 4px 0 0}
+#pb-quotes button{border:0;border-radius:9px;padding:10px 14px;font:inherit;font-weight:650;cursor:pointer}
+#pb-quotes .pb-primary{background:var(--pb-navy);color:#fff}
+#pb-quotes .pb-secondary{background:#f2f4f8;color:var(--pb-navy);margin-left:6px}
+#pb-quotes .pb-detail{border:1px solid var(--pb-line);border-radius:16px;padding:22px;background:#fff}
+#pb-quotes .pb-detail h2{color:var(--pb-navy);font-size:26px}
+#pb-quotes .pb-detail p{line-height:1.9;margin:12px 0}
+#pb-quotes .pb-detail h3{color:#8a6a25;margin-top:22px}
+#pb-quotes .pb-back{background:transparent;color:var(--pb-navy);padding:4px 0 12px}
+#pb-quotes .pb-empty,#pb-quotes .pb-status{padding:22px;text-align:center;color:var(--pb-muted)}
+#pb-quotes .pb-footer{text-align:center;color:var(--pb-muted);font-size:12px;padding:22px 0}
+@media(max-width:650px){#pb-quotes .pb-controls,#pb-quotes .pb-grid{grid-template-columns:1fr}#pb-quotes .pb-head{padding:22px 18px}#pb-quotes .pb-card blockquote{font-size:17px}}
