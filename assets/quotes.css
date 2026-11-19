@@ -28,3 +28,8 @@
 #pb-quotes .pb-load-more{min-width:190px}
 #pb-quotes .pb-card{min-width:0}
 #pb-quotes .pb-detail[hidden],#pb-quotes .pb-list[hidden]{display:none!important}
+
+#pb-quotes .pb-ways{padding-left:24px;line-height:1.85}
+#pb-quotes .pb-ways li{padding:8px 0 8px 4px}
+#pb-quotes .pb-ways li strong{color:var(--pb-navy)}
+#pb-quotes .pb-ways li p{margin:4px 0 0}
