@@ -107,6 +107,72 @@
         "bloggerPostUrl": "",
         "publishedAt": "2026-11-19"
       }
+    },
+    {
+      "id": 4,
+      "slug": "chhote-paul-mothya-pravasachi-suruvat",
+      "title": "छोटे पाऊलही मोठ्या प्रवासाची सुरुवात असते",
+      "quote": "छोटे पाऊलही मोठ्या प्रवासाची सुरुवात असते.",
+      "category": "Self Improvement",
+      "tags": [
+        "छोटी सुरुवात",
+        "सातत्य",
+        "प्रगती",
+        "ध्येय",
+        "आत्मविश्वास"
+      ],
+      "language": "Marathi",
+      "author": "Prasiddh Bharat",
+      "seo": {
+        "title": "छोटे पाऊलही मोठ्या प्रवासाची सुरुवात असते | प्रेरणादायी सुविचार",
+        "description": "मोठे ध्येय साध्य करण्यासाठी छोट्या सुरुवातीचे आणि सातत्यपूर्ण प्रयत्नांचे महत्त्व समजावणारा प्रेरणादायी मराठी लेख.",
+        "keywords": [
+          "छोटी सुरुवात",
+          "मोठे ध्येय",
+          "सातत्यपूर्ण प्रयत्न",
+          "मराठी प्रेरणादायी सुविचार",
+          "जीवनात प्रगती"
+        ]
+      },
+      "articleFile": "data/articles/batch-001.json",
+      "publication": {
+        "status": "published",
+        "bloggerPostUrl": "",
+        "publishedAt": "2026-11-19"
+      }
+    },
+    {
+      "id": 5,
+      "slug": "adchani-nastya-tar-yashachi-kimmat-kay",
+      "title": "अडचणी नसत्या तर यशाची किंमतच काय?",
+      "quote": "अडचणी नसत्या तर यशाची किंमतच काय?",
+      "category": "Motivation",
+      "tags": [
+        "अडचणी",
+        "संघर्ष",
+        "यश",
+        "चिकाटी",
+        "धैर्य"
+      ],
+      "language": "Marathi",
+      "author": "Prasiddh Bharat",
+      "seo": {
+        "title": "अडचणी नसत्या तर यशाची किंमतच काय? | संघर्ष आणि यशाचा अर्थ",
+        "description": "अडचणी, अपयश आणि संघर्ष यांतून मिळणारी शिकवण समजावणारा प्रेरणादायी मराठी लेख. कठीण काळात धैर्य आणि विवेकाने पुढे जाण्याचे मार्ग जाणून घ्या.",
+        "keywords": [
+          "अडचणी आणि यश",
+          "संघर्षातून यश",
+          "मराठी प्रेरणादायी लेख",
+          "अपयशातून शिकणे",
+          "धैर्य आणि चिकाटी"
+        ]
+      },
+      "articleFile": "data/articles/batch-001.json",
+      "publication": {
+        "status": "published",
+        "bloggerPostUrl": "",
+        "publishedAt": "2026-11-19"
+      }
     }
   ]
 }
